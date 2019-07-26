@@ -67,7 +67,7 @@
             </thead>
             <tbody>
                 <?php
-$query = "SELECT * FROM employes INNER JOIN data on employes.data=data.id WHERE employes.job=1";
+$query = "SELECT * FROM employes INNER JOIN data on employes.data=data.id WHERE employes.job=1 ORDER BY employes.age ASC";
 $result = mysqli_query($conexion, $query);
 while ($row = mysqli_fetch_array($result)) {?>
                 <tr>
@@ -95,13 +95,14 @@ while ($row = mysqli_fetch_array($result)) {?>
                         <?php echo $row['date_retirement'] ?>
                     </td>
                     <td>
-                        <span class="iconEdit" title="Editar">&#9998;</span>
-                        <span class="iconDelete" title="Eliminar">&#10005;</span>
+                        <a href="edit_employ.php?id=<?php echo $row['id']?>" class="iconEdit" title="Editar">&#9998;</a>
+
+                        <a href="php/delete_employ.php?id=<?php echo $row['id']?>" class="iconDelete" title="Eliminar">&#10005;</a>
                     </td>
                 </tr>
                 <?php }?>
                 <?php
-$query = "SELECT * FROM employes INNER JOIN data on employes.data=data.id WHERE employes.job=2";
+$query = "SELECT * FROM employes INNER JOIN data on employes.data=data.id WHERE employes.job=2 ORDER BY employes.age ASC";
 $result = mysqli_query($conexion, $query);
 while ($row = mysqli_fetch_array($result)) {?>
                 <tr>
@@ -129,14 +130,15 @@ while ($row = mysqli_fetch_array($result)) {?>
                         <?php echo $row['date_retirement'] ?>
                     </td>
                     <td>
-                        <span class="iconEdit" title="Editar">&#9998;</span>
-                        <span class="iconDelete" title="Eliminar">&#10005;</span>
+                        <a href="edit_employ.php?id=<?php echo $row['id']?>" class="iconEdit" title="Editar">&#9998;</a>
+
+                        <a href="php/delete_employ.php?id=<?php echo $row['id']?>" class="iconDelete" title="Eliminar">&#10005;</a>
                     </td>
                 </tr>
                 <?php }?>
 
                 <?php
-$query = "SELECT * FROM employes INNER JOIN data on employes.data=data.id WHERE employes.job=3";
+$query = "SELECT * FROM employes INNER JOIN data on employes.data=data.id WHERE employes.job=3 ORDER BY employes.age ASC";
 $result = mysqli_query($conexion, $query);
 while ($row = mysqli_fetch_array($result)) {?>
                 <tr>
@@ -164,8 +166,9 @@ while ($row = mysqli_fetch_array($result)) {?>
                         <?php echo $row['date_retirement'] ?>
                     </td>
                     <td>
-                        <span class="iconEdit" title="Editar">&#9998;</span>
-                        <span class="iconDelete" title="Eliminar">&#10005;</span>
+                        <a href="edit_employ.php?id=<?php echo $row['id']?>" class="iconEdit" title="Editar">&#9998;</a>
+
+                        <a href="php/delete_employ.php?id=<?php echo $row['id']?>" class="iconDelete" title="Eliminar">&#10005;</a>
                     </td>
                 </tr>
                 <?php }?>

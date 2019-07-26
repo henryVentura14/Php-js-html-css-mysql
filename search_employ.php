@@ -11,145 +11,87 @@
         </div>
         <div class="tablesHvg">
             <div class="contentFormHvg">
-                <form class="formHvg">
+                <form action="search_employ.php" method="POST" class="formHvg">
                     Fecha de ingreso
                     <input type="date" id="ingreso" name="ingreso">
                     Fecha de retiro
                     <input type="date" id="retiro" name="retiro" />
-                    <button class="btn" type="submit">BUSCAR</button>
+                    <button class="btn" name="search_employ" type="submit">BUSCAR</button>
                 </form>
             </div>
-            <table width="65%" cellspacing="0" cellpadding="0">
-                <thead>
-                    <td>
-                        puesto
-                    </td>
-                    <td>
-                        nombre
-                    </td>
-                    <td>
-                        fecha de ingreso
-                    </td>
-                    <td>
-                        fecha de retiro
-                    </td>
-                </thead>
-                <tr>
-                    <td rowspan="3">
-                        <p>Programadores</p>
-                    </td>
+            <table width="75%" cellspacing="0" cellpadding="0">
+            <thead>
+                <td>
+                    Puesto
+                </td>
+                <td>
+                    Edad
+                </td>
+                <td>
+                    Nombre
+                </td>
+                <td>
+                    Hijos
+                </td>
+                <td>
+                    Salario
+                </td>
+                <td>
+                    Fecha de ingreso
+                </td>
+                <td>
+                    Fecha de retiro
+                </td>
+                <td>
+                    Opción
+                </td>
+            </thead>
+            <tbody>
+                <?php
+    $date_start = $_POST['ingreso'];
+    $date_end = $_POST['retiro'];
+    $query = "SELECT * FROM employes INNER JOIN data on employes.data=data.id  WHERE data.date_admission>='{$date_start}' AND data.date_retirement<='{$date_end}' ORDER BY employes.job ASC";
 
-                    <td>
-                        <p>Alex</p>
-                    </td>
-                    <td>
-                        <p>12-12-1233</p>
-                    </td>
-                    </td>
-                    <td>
-                        <p>12-12-1444</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p>Henry</p>
-                    </td>
-                    <td>
-                        <p>12-12-1313</p>
-                    </td>
-                    <td>
-                        <p>12-12-1555</p>
-                    </td>
-                </tr>
-                <tr>
+    $result = mysqli_query($conexion, $query);
 
-                    <td>
-                        <p>Jose</p>
-                    </td>
-                    <td>
-                        <p>12-12-1555</p>
-                    </td>
-                    <td>
-                        <p>12-12-1555</p>
-                    </td>
-                </tr>
+while ($row = mysqli_fetch_array($result)) {?>
                 <tr>
-                <tr>
-                    <td rowspan="3">
-                        <p>Obreros</p>
+                    <td>
+                        <?php if ($row['job'] == 1) {
+    echo "Programador";}
+    ?>
+                             <?php if ($row['job'] == 2) {
+        echo "Tecnico";}
+    ?>
+                             <?php if ($row['job'] == 3) {
+        echo "Obrero";}
+    ?>
                     </td>
+                    <td>
+                        <?php echo $row['age'] ?>
+                    </td>
+                    <td>
+                        <?php echo $row['name'] ?>
+                    </td>
+                    <td>
+                        <?php echo $row['children'] ?>
+                    </td>
+                    <td>
+                        <?php echo $row['salary'] ?>
+                    </td>
+                    <td>
+                        <?php echo $row['date_admission'] ?>
+                    </td>
+                    <td>
+                        <?php echo $row['date_retirement'] ?>
+                    </td>
+                    <td>
+                        <a href="edit_employ.php?id=<?php echo $row['id'] ?>" class="iconEdit" title="Editar">&#9998;</a>
 
-                    <td>
-                        <p>Luis</p>
-                    </td>
-                    <td>
-                        <p>12-12-1313</p>
-                    </td>
-                    <td>
-                        <p>12-12-1313</p>
+                        <a href="php/delete_employ.php?id=<?php echo $row['id'] ?>" class="iconDelete" title="Eliminar">&#10005;</a>
                     </td>
                 </tr>
-                <tr>
-
-                    <td>
-                        <p>Fernando</p>
-                    </td>
-                    <td>
-                        <p>12-12-3131</p>
-                    </td>
-                    <td>
-                        <p>12-12-3131</p>
-                    </td>
-                </tr>
-                <tr>
-
-                    <td>
-                        <p>Luis</p>
-                    </td>
-                    <td>
-                        <p>12-12-4213</p>
-                    </td>
-                    <td>
-                        <p>12-12-1314</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td rowspan="3">
-                        <p>Tecticos</p>
-                    </td>
-
-                    <td>
-                        <p>Henry</p>
-                    </td>
-                    <td>
-                        <p>03-03-1319</p>
-                    </td>
-                    <td>
-                        <p>03-03-1319</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p>Jose</p>
-                    </td>
-                    <td>
-                        <p>04-04-2342</p>
-                    </td>
-                    <td>
-                        <p>04-04-2342</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p>Luis</p>
-                    </td>
-                    <td>
-                        <p>01-01-2134</p>
-                    </td>
-                    <td>
-                        <p>01-01-2139</p>
-                    </td>
-                </tr>
+                <?php }?>
             </table>
         </div>
     </div>

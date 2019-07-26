@@ -107,3 +107,7 @@ INSERT INTO
   `employes` (name, age, children, job, data)
 VALUES
   ('Carhen', 25, 2, 3, 9);
+
+  UPDATE data SET salary=300000, date_admission='1992-02-02', date_retirement='2012-12-12' WHERE id=1;
+
+  UPDATE employes SET job=2, name="Jahaziel", age=26,children=1 WHERE id=1; 
