@@ -3,7 +3,7 @@ include "./conexion.php";
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
-    $query = "DELETE FROM employes WHERE id='$id'";
+    $query = "DELETE FROM employees WHERE id='$id'";
     $result = mysqli_query($conexion, $query);
     $query2 = "DELETE FROM data WHERE id='$id'";
     $result2 = mysqli_query($conexion, $query2);

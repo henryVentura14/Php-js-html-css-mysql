@@ -3,7 +3,7 @@ include "./php/conexion.php";
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
-    $query = "SELECT * FROM employes INNER JOIN data on employes.data=data.id WHERE employes.id='$id'";
+    $query = "SELECT * FROM employees INNER JOIN data on employees.data=data.id WHERE employees.id='$id'";
     $result = mysqli_query($conexion, $query);
  
     if (mysqli_num_rows($result)==1) {
@@ -33,7 +33,7 @@ if(isset($_POST['edit_employ'])){
     $date_end = $_POST['retiro'];
     $query = "UPDATE data SET salary='$salary', date_admission='$date_start', date_retirement='$date_end' WHERE id='$id'";
     $result = mysqli_query($conexion, $query);
-    $query2 = "UPDATE employes SET job='$job', name='$name', age='$age',children='$children' WHERE id='$id'";
+    $query2 = "UPDATE employees SET job='$job', name='$name', age='$age',children='$children' WHERE id='$id'";
     $result2 = mysqli_query($conexion, $query2);
 
     $_SESSION['mensaje'] = "Datos modificados datos";
@@ -44,6 +44,14 @@ header("Location:index.php");
 
 ?>
 <?php include "./php/header.php"; ?>
+<div class="navbarHvg">
+        <div class="leftNavHvg">
+            <h2>EDITAR</h2>
+        </div>
+        <div class="rightNavHvg">
+            <a href="index.php" class="link">INICIO</a>
+        </div>
+    </div>
 <div class="contentFormHvg">
             <form action="edit_employ.php?id=<?php echo $_GET['id'];?>" method="POST" class="formHvg">
                 <select name="puesto" id="puesto" default="<?php echo $puesto?>">

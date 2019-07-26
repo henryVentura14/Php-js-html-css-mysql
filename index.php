@@ -67,7 +67,7 @@
             </thead>
             <tbody>
                 <?php
-$query = "SELECT * FROM employes INNER JOIN data on employes.data=data.id WHERE employes.job=1 ORDER BY employes.age ASC";
+$query = "SELECT * FROM employees INNER JOIN data on employees.data=data.id WHERE employees.job=1 ORDER BY employees.age ASC";
 $result = mysqli_query($conexion, $query);
 while ($row = mysqli_fetch_array($result)) {?>
                 <tr>
@@ -102,7 +102,7 @@ while ($row = mysqli_fetch_array($result)) {?>
                 </tr>
                 <?php }?>
                 <?php
-$query = "SELECT * FROM employes INNER JOIN data on employes.data=data.id WHERE employes.job=2 ORDER BY employes.age ASC";
+$query = "SELECT * FROM employees INNER JOIN data on employees.data=data.id WHERE employees.job=2 ORDER BY employees.age ASC";
 $result = mysqli_query($conexion, $query);
 while ($row = mysqli_fetch_array($result)) {?>
                 <tr>
@@ -138,7 +138,7 @@ while ($row = mysqli_fetch_array($result)) {?>
                 <?php }?>
 
                 <?php
-$query = "SELECT * FROM employes INNER JOIN data on employes.data=data.id WHERE employes.job=3 ORDER BY employes.age ASC";
+$query = "SELECT * FROM employees INNER JOIN data on employees.data=data.id WHERE employees.job=3 ORDER BY employees.age ASC";
 $result = mysqli_query($conexion, $query);
 while ($row = mysqli_fetch_array($result)) {?>
                 <tr>

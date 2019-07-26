@@ -13,7 +13,7 @@ if (isset($_POST['insert_employ'])) {
     $result = mysqli_query($conexion, $query);
     $id = mysqli_insert_id( $conexion);
     mysqli_free_result( $result);
-    $query3 = "INSERT INTO `employes` (name, age, children, job, data, reg_date) VALUES ('$name', '$age', '$children', '$job', '$id', current_timestamp())";
+    $query3 = "INSERT INTO `employees` (name, age, children, job, data, reg_date) VALUES ('$name', '$age', '$children', '$job', '$id', current_timestamp())";
     $result3 = mysqli_query($conexion, $query3);
     if (!$result || !$result3) {
         echo "Query Failed";

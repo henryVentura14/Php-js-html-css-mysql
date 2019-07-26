@@ -12,7 +12,7 @@ CREATE TABLE data(
   FOREIGN KEY (job) REFERENCES jobs(id),
   reg_date TIMESTAMP
 );
-CREATE TABLE employes(
+CREATE TABLE employees(
   id INT(6) AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(40) NOT NULL,
   age INT(2) NOT NULL,
@@ -72,42 +72,38 @@ INSERT INTO
 VALUES
   ('1982-01-03', '2001-12-12', 4000000, 3);
 INSERT INTO
-  `employes` (name, age, children, job, data)
+  `employees` (name, age, children, job, data)
 VALUES
   ('Henry', 26, 0, 1, 1);
 INSERT INTO
-  `employes` (name, age, children, job, data)
+  `employees` (name, age, children, job, data)
 VALUES
   ('Luis', 19, 4, 2, 2);
 INSERT INTO
-  `employes` (name, age, children, job, data)
+  `employees` (name, age, children, job, data)
 VALUES
   ('Jose', 22, 1, 3, 3);
 INSERT INTO
-  `employes` (name, age, children, job, data)
+  `employees` (name, age, children, job, data)
 VALUES
   ('Victor', 29, 2, 1, 4);
 INSERT INTO
-  `employes` (name, age, children, job, data)
+  `employees` (name, age, children, job, data)
 VALUES
   ('Julio', 19, 0, 2, 5);
 INSERT INTO
-  `employes` (name, age, children, job, data)
+  `employees` (name, age, children, job, data)
 VALUES
   ('Shamaru', 20, 0, 3, 6);
 INSERT INTO
-  `employes` (name, age, children, job, data)
+  `employees` (name, age, children, job, data)
 VALUES
   ('Marielys', 21, 1, 1, 7);
 INSERT INTO
-  `employes` (name, age, children, job, data)
+  `employees` (name, age, children, job, data)
 VALUES
   ('Drivanys', 29, 3, 2, 8);
 INSERT INTO
-  `employes` (name, age, children, job, data)
+  `employees` (name, age, children, job, data)
 VALUES
   ('Carhen', 25, 2, 3, 9);
-
-  UPDATE data SET salary=300000, date_admission='1992-02-02', date_retirement='2012-12-12' WHERE id=1;
-
-  UPDATE employes SET job=2, name="Jahaziel", age=26,children=1 WHERE id=1; 

@@ -48,11 +48,12 @@
             </thead>
             <tbody>
                 <?php
-    $date_start = $_POST['ingreso'];
-    $date_end = $_POST['retiro'];
-    $query = "SELECT * FROM employes INNER JOIN data on employes.data=data.id  WHERE data.date_admission>='{$date_start}' AND data.date_retirement<='{$date_end}' ORDER BY employes.job ASC";
 
-    $result = mysqli_query($conexion, $query);
+$date_start = @$_POST['ingreso'];
+$date_end = @$_POST['retiro'];
+$query = "SELECT * FROM employees INNER JOIN data on employees.data=data.id  WHERE data.date_admission>='{$date_start}' AND data.date_retirement<='{$date_end}' ORDER BY employees.job ASC";
+
+$result = mysqli_query($conexion, $query);
 
 while ($row = mysqli_fetch_array($result)) {?>
                 <tr>
