@@ -13,9 +13,9 @@
             <div class="contentFormHvg">
                 <form action="search_employ.php" method="POST" class="formHvg">
                     Fecha de ingreso
-                    <input type="date" id="ingreso" name="ingreso">
+                    <input class="input" type="date" id="ingreso" name="ingreso">
                     Fecha de retiro
-                    <input type="date" id="retiro" name="retiro" />
+                    <input class="input" type="date" id="retiro" name="retiro" />
                     <button class="btn" name="search_employ" type="submit">BUSCAR</button>
                 </form>
             </div>

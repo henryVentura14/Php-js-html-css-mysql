@@ -52,9 +52,9 @@ header("Location:index.php");
             <a href="index.php" class="link">INICIO</a>
         </div>
     </div>
-<div class="contentFormHvg">
+<div class="contentFormEdit">
             <form action="edit_employ.php?id=<?php echo $_GET['id'];?>" method="POST" class="formHvg">
-                <select name="puesto" id="puesto" default="<?php echo $puesto?>">
+                <select class="select"  name="puesto" id="puesto" default="<?php echo $puesto?>">
                     <option value="1">
                         Programador
                     </option>
@@ -65,12 +65,12 @@ header("Location:index.php");
                         Obrero
                     </option>
                 </select>
-                <input type="text" id="nombre" name="nombre" value="<?php echo $nombre?>" placeholder="Nombre">
-                <input type="text" id="edad" name="edad" value="<?php echo $edad?>"  placeholder="Edad" />
-                <input type="text" id="hijos" name="hijos" value="<?php echo $hijos?>"  placeholder="Cantidad de hijos" />
-                <input type="text" id="salario" name="salario" value="<?php echo $salario?>"  placeholder="Salario" />
-                <input type="date" id="ingreso" name="ingreso" value="<?php echo $newDateStart?>"  placeholder="Ingreso" />
-                <input type="date" id="retiro" name="retiro" value="<?php echo $newDateEnd?>"  placeholder="Retiro" />
+                <input class="input" type="text" id="nombre" name="nombre" value="<?php echo $nombre?>" placeholder="Nombre">
+                <input class="input" type="text" id="edad" name="edad" value="<?php echo $edad?>"  placeholder="Edad" />
+                <input class="input" type="text" id="hijos" name="hijos" value="<?php echo $hijos?>"  placeholder="Cantidad de hijos" />
+                <input class="input" type="text" id="salario" name="salario" value="<?php echo $salario?>"  placeholder="Salario" />
+                <input class="input" type="date" id="ingreso" name="ingreso" value="<?php echo $newDateStart?>"  placeholder="Ingreso" />
+                <input class="input" type="date" id="retiro" name="retiro" value="<?php echo $newDateEnd?>"  placeholder="Retiro" />
                 <button class="btn" name="edit_employ" type="submit">EDITAR</button>
             </form>
         </div>

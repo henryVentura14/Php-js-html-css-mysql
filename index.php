@@ -18,7 +18,7 @@
         <?php session_unset();}?>
         <div class="contentFormHvg">
             <form action="./php/insert_employ.php" onsubmit="validarFormulario()" method="POST" class="formHvg">
-                <select name="puesto" id="puesto">
+                <select class="select" name="puesto" id="puesto">
                     <option value="1">
                         Programador
                     </option>
@@ -29,12 +29,12 @@
                         Obrero
                     </option>
                 </select>
-                <input type="text" id="nombre" name="nombre" placeholder="Nombre">
-                <input type="text" id="edad" name="edad" placeholder="Edad" />
-                <input type="text" id="hijos" name="hijos" placeholder="Cantidad de hijos" />
-                <input type="text" id="salario" name="salario" placeholder="Salario" />
-                <input type="date" id="ingreso" name="ingreso" placeholder="Ingreso" />
-                <input type="date" id="retiro" name="retiro" placeholder="Retiro" />
+                <input class="input" type="text" id="nombre" name="nombre" placeholder="Nombre">
+                <input class="input" type="text" id="edad" name="edad" placeholder="Edad" />
+                <input class="input" type="text" id="hijos" name="hijos" placeholder="Cantidad de hijos" />
+                <input class="input" type="text" id="salario" name="salario" placeholder="Salario" />
+                <input class="input" type="date" id="ingreso" name="ingreso" placeholder="Ingreso" />
+                <input class="input" type="date" id="retiro" name="retiro" placeholder="Retiro" />
                 <button class="btn" name="insert_employ" id="button" type="submit">INSERTAR</button>
             </form>
         </div>

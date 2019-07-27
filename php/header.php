@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>My capacity test</title>
     <link rel="stylesheet" href="./css/mainHvg.css">
+    <link rel="stylesheet" href="./css/landing.css">
     <link rel="icon" type="image/png" href="img/skills.png">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
 </head>
