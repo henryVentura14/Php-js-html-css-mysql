@@ -23,6 +23,13 @@ CREATE TABLE employees(
   FOREIGN KEY (job) REFERENCES jobs(id),
   reg_date TIMESTAMP
 );
+CREATE TABLE users(
+  id INT(6) AUTO_INCREMENT PRIMARY KEY,
+  user VARCHAR(30) NOT NULL,
+  email VARCHAR(30) NOT NULL,
+  pass VARCHAR(24) NOT NULL,
+  reg_date TIMESTAMP
+);
 INSERT INTO
   `jobs` (id, job)
 VALUES

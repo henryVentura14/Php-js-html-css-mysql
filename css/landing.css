@@ -1,35 +1,98 @@
 .landing {
     background-color: #fff;
     height: 5rem;
+    color: grey;
+    z-index: 4;
+}
+
+.group-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    justify-items: flex-end;
+    align-items: center;
+    width: 17%;
+    margin-right: 2%;
 }
 
 .btn-nav {
+    cursor: pointer;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
     background-color: transparent;
-    text-align: center;
     color: grey;
-    border: solid 1px rgb(81, 145, 253);
-    padding: 10px 10px 10px 10px;
+    border: solid 1px #11977D;
+    padding: 5px 5px 5px 5px;
     border-radius: 3px 3px 3px 3px;
-    width: 20%;
-    font-size: 14px;
-    margin-right: 2rem;
-    height: 2rem;
+    font-size: 12px;
+    margin-right: 4px;
+    width: 10rem;
 }
 
 .btn-nav:hover {
-    background-color: rgb(81, 145, 253);
+    background-color: #11977D;
     color: #fff;
     border: solid 1px transparent;
 }
 
 .input-nav {
-    width: 30%;
-    background-color: transparent;
+    padding: 5px 5px 5px 5px;
+    border-radius: 3px 3px 3px 3px;
+    border: solid 1px grey;
     height: 1rem;
-
+    margin-right: 4px;
+    width: 5rem;
+    font-size: 12px;
 }
-.input-nav input::placeholder{
+
+.input-nav:hover {
+    border: solid 1px #11977D;
+}
+
+.input-nav input::placeholder {
     background-color: transparent;
+    border: solid 1px #11977D;
+    color: #fff;
 }
 
-.cover {}
+.link-landing {
+    cursor: pointer;
+    color: grey;
+    border: none;
+    border: solid 1px transparent;
+}
+
+.link-landing:hover {
+    color: black;
+}
+
+.cover {
+    position: relative;
+    top: 5rem;
+    height: 65vh;
+    width: 100%;
+    background: url('../img/image-big.png') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.home {
+    height: 65vh;
+}
+
+.about {
+    height: 65vh;
+}
+
+.products {
+    height: 65vh;
+}
+
+.contact {
+    height: 65vh;
+}

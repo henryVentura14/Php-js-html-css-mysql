@@ -1,6 +1,9 @@
 <?php include "./php/conexion.php";?>
 <?php include "./php/header.php";?>
-
+<?php
+if (!$_SESSION['loggedin']) {
+    header("Location:./signup.php");
+}?>
 <div class="containerHvg">
     <div class="navbarHvg">
         <div class="leftNavHvg">
@@ -8,14 +11,13 @@
         </div>
         <div class="rightNavHvg">
             <a href="search_employ.php" class="link">BUSCAR</a>
+            <a href="landing_page.php" class="link">SALIR</a>
         </div>
     </div>
     <div class="tablesHvg">
         <?php if (isset($_SESSION['mensaje'])) {?>
-
         <div class="<?=$_SESSION['mensaje_tipo']?>"><?=$_SESSION['mensaje']?></div>
-
-        <?php session_unset();}?>
+        <?php }?>
         <div class="contentFormHvg">
             <form action="./php/insert_employ.php" onsubmit="validarFormulario()" method="POST" class="formHvg">
                 <select class="select" name="puesto" id="puesto">
@@ -72,9 +74,9 @@ $result = mysqli_query($conexion, $query);
 while ($row = mysqli_fetch_array($result)) {?>
                 <tr>
                     <td>
-                        <?php if($row['job']==1){
-                            echo "Programador"; }
-                        ?>
+                        <?php if ($row['job'] == 1) {
+    echo "Programador";}
+    ?>
                     </td>
                     <td>
                         <?php echo $row['age'] ?>
@@ -95,9 +97,9 @@ while ($row = mysqli_fetch_array($result)) {?>
                         <?php echo $row['date_retirement'] ?>
                     </td>
                     <td>
-                        <a href="edit_employ.php?id=<?php echo $row['id']?>" class="iconEdit" title="Editar">&#9998;</a>
+                        <a href="edit_employ.php?id=<?php echo $row['id'] ?>" class="iconEdit" title="Editar">&#9998;</a>
 
-                        <a href="php/delete_employ.php?id=<?php echo $row['id']?>" class="iconDelete" title="Eliminar">&#10005;</a>
+                        <a href="php/delete_employ.php?id=<?php echo $row['id'] ?>" class="iconDelete" title="Eliminar">&#10005;</a>
                     </td>
                 </tr>
                 <?php }?>
@@ -107,9 +109,9 @@ $result = mysqli_query($conexion, $query);
 while ($row = mysqli_fetch_array($result)) {?>
                 <tr>
                     <td>
-                        <?php if($row['job']==2){
-                            echo "Tecnico"; }
-                        ?>
+                        <?php if ($row['job'] == 2) {
+    echo "Tecnico";}
+    ?>
                     </td>
                     <td>
                         <?php echo $row['age'] ?>
@@ -130,9 +132,9 @@ while ($row = mysqli_fetch_array($result)) {?>
                         <?php echo $row['date_retirement'] ?>
                     </td>
                     <td>
-                        <a href="edit_employ.php?id=<?php echo $row['id']?>" class="iconEdit" title="Editar">&#9998;</a>
+                        <a href="edit_employ.php?id=<?php echo $row['id'] ?>" class="iconEdit" title="Editar">&#9998;</a>
 
-                        <a href="php/delete_employ.php?id=<?php echo $row['id']?>" class="iconDelete" title="Eliminar">&#10005;</a>
+                        <a href="php/delete_employ.php?id=<?php echo $row['id'] ?>" class="iconDelete" title="Eliminar">&#10005;</a>
                     </td>
                 </tr>
                 <?php }?>
@@ -143,9 +145,9 @@ $result = mysqli_query($conexion, $query);
 while ($row = mysqli_fetch_array($result)) {?>
                 <tr>
                     <td>
-                        <?php if($row['job']==3){
-                            echo "Obrero"; }
-                        ?>
+                        <?php if ($row['job'] == 3) {
+    echo "Obrero";}
+    ?>
                     </td>
                     <td>
                         <?php echo $row['age'] ?>
@@ -166,9 +168,9 @@ while ($row = mysqli_fetch_array($result)) {?>
                         <?php echo $row['date_retirement'] ?>
                     </td>
                     <td>
-                        <a href="edit_employ.php?id=<?php echo $row['id']?>" class="iconEdit" title="Editar">&#9998;</a>
+                        <a href="edit_employ.php?id=<?php echo $row['id'] ?>" class="iconEdit" title="Editar">&#9998;</a>
 
-                        <a href="php/delete_employ.php?id=<?php echo $row['id']?>" class="iconDelete" title="Eliminar">&#10005;</a>
+                        <a href="php/delete_employ.php?id=<?php echo $row['id'] ?>" class="iconDelete" title="Eliminar">&#10005;</a>
                     </td>
                 </tr>
                 <?php }?>

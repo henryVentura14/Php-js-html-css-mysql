@@ -1,15 +1,24 @@
 function validarFormulario() {
   var cmbSelector = document.getElementById('puesto').selectedIndex;
-	var txtNombre = document.getElementById('nombre').value;
+  var txtNombre = document.getElementById('nombre').value;
+  var txtUser = document.getElementById('user').value;
   var txtEdad = document.getElementById('edad').value;
   var txtHijos = document.getElementById('hijos').value;
   var txtSalario = document.getElementById('salario').value;
   var txtFecha = document.getElementById('ingreso').value;
   var txtFecha2 = document.getElementById('retiro').value;
+  var txtPass1 = document.getElementById('pass1').value;
+  var txtPass2 = document.getElementById('pass2').value;
+  var txtCorreo = document.getElementById('email').value;
+
   var numerico = /^\d*$/;
 
+  if(txtPass1!=txtPass2){
+	alert('ERROR: Las contraseñas no coinciden');
+		return false;
+  }
 	//Test campo obligatorio
-	if (txtNombre == null || txtNombre.length == 0 || /^\s+$/.test(txtNombre) ||mumerico.test(txtNombre)) {
+	if (txtUser == null || txtUser.length == 0 ||txtNombre == null || txtNombre.length == 0 || /^\s+$/.test(txtNombre) ||mumerico.test(txtNombre)) {
 		alert('ERROR: El campo nombre no debe ir vacío o lleno de solamente espacios en blanco');
 		return false;
 	}
@@ -40,6 +49,10 @@ function validarFormulario() {
 		alert('ERROR: Debe seleccionar una opcion del select');
 		return false;
 	}
+	if(!(/\S+@\S+\.\S+/.test(txtCorreo))){
+		alert('ERROR: Debe escribir un correo válido');
+		return false;
+	  }
 
 	return true;
 }

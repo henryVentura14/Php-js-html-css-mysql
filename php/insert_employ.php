@@ -21,6 +21,8 @@ if (isset($_POST['insert_employ'])) {
     $_SESSION['mensaje'] = "Un empleado ha sido insertado";
     $_SESSION['mensaje_tipo'] = "greenAlert";
     header("Location:../index.php");
+    $_SESSION['time'] = time(); 
+    $_SESSION['close'] = $_SESSION['time'] + (1 * 60);
 } else {
     echo "Not found";
 }

@@ -52,7 +52,7 @@ header("Location:index.php");
             <a href="index.php" class="link">INICIO</a>
         </div>
     </div>
-<div class="contentFormEdit">
+<div class="contentFormCenter">
             <form action="edit_employ.php?id=<?php echo $_GET['id'];?>" method="POST" class="formHvg">
                 <select class="select"  name="puesto" id="puesto" default="<?php echo $puesto?>">
                     <option value="1">
