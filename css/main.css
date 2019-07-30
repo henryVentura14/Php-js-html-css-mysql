@@ -6,6 +6,10 @@ html {
     padding: 0;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -88,7 +92,7 @@ td {
     color: rgb(211, 211, 211);
 }
 
-.containerHVg {
+.container {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -99,7 +103,7 @@ td {
     margin-left: 0%;
 }
 
-.navbarHvg {
+.navbar {
     position: fixed;
     top: 0%;
     left: 0%;
@@ -114,7 +118,7 @@ td {
     color: #fff;
 }
 
-.leftNavHvg {
+.left-nav {
     display: flex;
     justify-content: flex-start;
     align-content: center;
@@ -126,7 +130,7 @@ td {
     margin-left: 14rem;
 }
 
-.rightNavHvg {
+.right-nav {
     display: flex;
     justify-content: space-around;
     justify-items: space-around;
@@ -135,9 +139,11 @@ td {
     width: 20%;
     height: 100%;
     font-size: 0.9rem;
+    position: relative;
+    right: 8rem;
 }
 
-.tablesHvg {
+.tables {
     display: flex;
     justify-content: space-around;
     align-content: center;
@@ -148,7 +154,7 @@ td {
     height: 40rem;
 }
 
-.contentFormHvg {
+.content-form {
     position: relative;
     top: 3rem;
     width: 20%;
@@ -156,7 +162,7 @@ td {
     flex-direction: column;
 }
 
-.contentFormCenter {
+.center-form {
     position: absolute;
     top: 1rem;
     left: 35%;
@@ -165,7 +171,7 @@ td {
     flex-direction: column;
 }
 
-.formHvg {
+.form {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -174,34 +180,34 @@ td {
     height: 100%;
 }
 
-.title_signup {
+.title-signup {
     color: grey;
     text-align: center;
     margin-top: 8rem;
 }
 
-.iconDelete {
+.icon-delete {
     font-size: 2rem;
     color: rgb(185, 59, 59);
     cursor: pointer;
     margin-left: 5px;
 }
 
-.iconEdit {
+.icon-edit {
     font-size: 2rem;
     color: rgb(222, 192, 71);
     cursor: pointer;
     margin-right: 5px;
 }
 
-.icon{
+.icon {
     font-size: 1.2rem;
     color: #FFF;
     cursor: pointer;
     margin-right: 5px;
 }
 
-.greenAlert {
+.green-alert {
     background-color: rgb(0, 150, 136);
     color: #fff;
     position: fixed;
@@ -213,7 +219,7 @@ td {
     border-radius: 4px;
 }
 
-.redAlert {
+.red-alert {
     background-color: rgb(198, 40, 40);
     color: #fff;
     position: fixed;

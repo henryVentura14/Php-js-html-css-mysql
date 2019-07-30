@@ -11,11 +11,11 @@ if (isset($_POST['login'])) {
     if (($passEcrt == $row['pass'])){
         $_SESSION['loggedin'] = true;
         $_SESSION['mensaje'] = "Has iniciado sesion";
-        $_SESSION['mensaje_tipo'] = "greenAlert";
+        $_SESSION['mensaje_tipo'] = "green-alert";
         header("Location: ./../index.php");
     }if (mysqli_num_rows($result)==0) {
         $_SESSION['mensaje'] = "El usuario no existe, registrate!";
-        $_SESSION['mensaje_tipo'] = "redAlert";
+        $_SESSION['mensaje_tipo'] = "red-alert";
         header("Location: ./../signup.php");
     }
 } else {

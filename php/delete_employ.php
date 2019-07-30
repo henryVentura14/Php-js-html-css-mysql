@@ -11,7 +11,7 @@ if (isset($_GET['id'])) {
         die("Failed delete");
     }
     $_SESSION['mensaje'] = "Un empleado ha sido eliminado";
-    $_SESSION['mensaje_tipo'] = "redAlert";
+    $_SESSION['mensaje_tipo'] = "red-alert";
     header("Location:../index.php");
 } else {
     echo "Not found";

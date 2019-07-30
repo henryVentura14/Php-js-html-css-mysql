@@ -11,7 +11,7 @@ if (isset($_POST['sign_up'])) {
     $row = mysqli_fetch_array($result);
     if (mysqli_num_rows($result) == 1) {
         $_SESSION['mensaje'] = "Este usuario ya existe";
-        $_SESSION['mensaje_tipo'] = "redAlert";
+        $_SESSION['mensaje_tipo'] = "red-alert";
         $_SESSION['time'] = time(); 
         $_SESSION['close'] = $_SESSION['time'] + (1 * 60);
     } else {
@@ -21,13 +21,13 @@ if (isset($_POST['sign_up'])) {
     if (!$result2) {
         echo "Query Failed";
         $_SESSION['mensaje'] = "No conecto con el servidor";
-        $_SESSION['mensaje_tipo'] = "redAlert";
+        $_SESSION['mensaje_tipo'] = "red-alert";
         $_SESSION['time'] = time(); 
         $_SESSION['close'] = $_SESSION['time'] + (1 * 60);
     }
     if ($result2) {
         $_SESSION['mensaje'] = "Usuario creado";
-        $_SESSION['mensaje_tipo'] = "greenAlert";
+        $_SESSION['mensaje_tipo'] = "green-alert";
         header("Location: ./../landing_page.php");
         $_SESSION['time'] = time(); 
         $_SESSION['close'] = $_SESSION['time'] + (1 * 60);

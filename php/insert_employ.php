@@ -19,7 +19,7 @@ if (isset($_POST['insert_employ'])) {
         echo "Query Failed";
     }
     $_SESSION['mensaje'] = "Un empleado ha sido insertado";
-    $_SESSION['mensaje_tipo'] = "greenAlert";
+    $_SESSION['mensaje_tipo'] = "green-alert";
     header("Location:../index.php");
     $_SESSION['time'] = time(); 
     $_SESSION['close'] = $_SESSION['time'] + (1 * 60);

@@ -1,4 +1,3 @@
-<script src="js/mainHvg.js"></script>
-<script src="js/scrolling.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
