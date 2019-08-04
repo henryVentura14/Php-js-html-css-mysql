@@ -10,6 +10,10 @@ html {
     display: none;
 }
 
+::-moz-scrollbar {
+    display: none;
+}
+
 body {
     margin: 0;
     padding: 0;

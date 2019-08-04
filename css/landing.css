@@ -12,7 +12,7 @@
     transition: 0.8s;
     background-color: #fff;
     position: absolute;
-    right: 3rem;
+    right: 1rem;
     top: 5rem;
     width: 9rem;
     height: 0px;
@@ -21,7 +21,7 @@
     align-content: center;
     justify-items: center;
     align-items: center;
-    padding: 1rem;
+    padding-right: 2rem;
     border-radius: 0px 0px 3px 3px;
 }
 
@@ -129,7 +129,7 @@
     cursor: pointer;
     position: relative;
     top: -3.3rem;
-    left: 8.5rem;
+    left: 9.5rem;
     font-size: 24px;
     color: grey;
 }
