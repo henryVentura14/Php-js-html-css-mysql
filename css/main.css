@@ -41,6 +41,14 @@ td {
     border: solid 0.2px rgba(0, 0, 0, 0.267);
 }
 
+tr:nth-child(even) {
+    background: #CCC;
+}
+
+tr:nth-child(odd) {
+    background: #FFF;
+}
+
 .btn {
     background-color: transparent;
     text-align: center;
@@ -70,6 +78,11 @@ td {
 
 .input:hover {
     border: solid 1px #11977D;
+}
+
+.validate{
+    display: none;
+    color: rgb(185, 59, 59);
 }
 
 .select, .select::-webkit-outer-spin-button {

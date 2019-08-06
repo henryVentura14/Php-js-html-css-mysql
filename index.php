@@ -1,9 +1,21 @@
 <?php include "./php/conexion.php"; ?>
-<?php include "./php/header.php"; ?>
 <?php
 if (!$_SESSION['loggedin']) {
     header("Location:./signup.php");
 } ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My capacity test</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/landing.css">
+    <link rel="icon" type="image/png" href="img/skills.png">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+<body>
 <div class="container">
     <div class="navbar">
         <div class="left-nav">
@@ -19,7 +31,7 @@ if (!$_SESSION['loggedin']) {
             <div class="<?= $_SESSION['mensaje_tipo'] ?>"><?= $_SESSION['mensaje'] ?></div>
         <?php } ?>
         <div class="content-form">
-            <form action="./php/insert_employ.php" onsubmit="validarFormulario()" method="POST" class="form">
+            <form action="./php/insert_employ.php" onsubmit="EmployValidate()" method="POST" class="form">
                 <select class="select" name="puesto" id="puesto">
                     <option value="1">
                         Programador
@@ -41,7 +53,7 @@ if (!$_SESSION['loggedin']) {
             </form>
         </div>
         <table width="75%" cellspacing="0" cellpadding="0">
-            <thead>
+            <thead class="thead">
                 <td>
                     Puesto
                 </td>
@@ -181,4 +193,6 @@ if (!$_SESSION['loggedin']) {
 
     </div>
 </div>
-<?php include "php/footer.php"; ?>
+<script src="js/employ.js"></script>
+</body>
+</html>

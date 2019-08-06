@@ -1,9 +1,21 @@
 <?php include "./php/conexion.php"; ?>
-<?php include "./php/header.php"; ?>
 <?php
 if (!$_SESSION['loggedin']) {
     header("Location:./signup.php");
 } ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My capacity test</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/landing.css">
+    <link rel="icon" type="image/png" href="img/skills.png">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+<body>
 <div class="container">
     <div class="navbar">
         <div class="left-nav">
@@ -52,7 +64,6 @@ if (!$_SESSION['loggedin']) {
             </thead>
             <tbody>
                 <?php
-
                 $date_start = @$_POST['ingreso'];
                 $date_end = @$_POST['retiro'];
                 $query = "SELECT * FROM employees INNER JOIN data on employees.data=data.id  WHERE data.date_admission>='{$date_start}' AND data.date_retirement<='{$date_end}' ORDER BY employees.job ASC";
@@ -104,4 +115,6 @@ if (!$_SESSION['loggedin']) {
     </div>
 </div>
 </body>
-<?php include "./php/footer.php"; ?>
+<script src="js/main.js"></script>
+</body>
+</html>

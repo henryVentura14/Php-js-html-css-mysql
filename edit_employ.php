@@ -39,7 +39,19 @@ if (isset($_POST['edit_employ'])) {
     header("Location:index.php");
 }
 ?>
-<?php include "./php/header.php"; ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My capacity test</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/landing.css">
+    <link rel="icon" type="image/png" href="img/skills.png">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+<body>
 <div class="navbar">
     <div class="left-nav">
         <h2>EDITAR</h2>
@@ -70,4 +82,6 @@ if (isset($_POST['edit_employ'])) {
         <button class="btn" name="edit_employ" type="submit">EDITAR</button>
     </form>
 </div>
-<?php include "./php/footer.php"; ?>
+<script src="js/main.js"></script>
+</body>
+</html>
